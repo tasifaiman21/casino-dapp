@@ -18,17 +18,19 @@ export default function Footer() {
     <Flex
       w="100%"
       bgColor="#E2E8F0"
-      h="100%"
+      
       alignItems="center"
       justifyContent="center"
+  
     >
       <SimpleGrid
-        columns={[4, 4, 4, 4, 4]}
+
+        columns={[1, 4, 4, 4, 4]}
         spacing={["3rem", "4rem", "5rem", "5rem", "6rem"]}
       >
         {/* flex for company start */}
 
-        <Flex alignItems="center">
+        <Flex alignItems="center" justifyContent="center">
           <Text fontSize="lg" fontWeight="bold" color="#000000">
             Company
           </Text>

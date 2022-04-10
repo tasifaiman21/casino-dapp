@@ -27,10 +27,11 @@ export default function Navbar() {
   return (
     /* mother flex for all start */
     <React.Fragment>
-      <Flex w="100%" h="100%" alignItems="center" justifyContent="center">
+      <Flex w="100%"  alignItems="center" justifyContent="center">
         <SimpleGrid
           columns={[3, 3, 3, 3, 3]}
-          spacing={["3rem", "4rem", "8rem", "7rem", "6rem"]}
+          spacing={["3rem", "4rem", "10.5rem", "7rem", "6rem"]}
+        
         >
           {/* flex for company start */}
 
@@ -63,7 +64,8 @@ export default function Navbar() {
             <Flex
               bgColor="gray.400"
               borderRadius="2rem"
-              p="1rem"
+              px="1rem"
+              py="0.5rem"
               gap="0.5rem"
             >
               <Link href="">
@@ -101,13 +103,14 @@ export default function Navbar() {
 
           {/* flex for wallet start */}
 
-          <Flex alignItems="center" justifyContent="center">
+          <Flex alignItems="center" justifyContent="center" >
             <Text
               bgColor="#000000"
               borderRadius="1rem"
-              p={["0.5rem", "0.5rem", "0.5rem", "0.5rem", "0.5rem"]}
+              px="1rem"
+              py="0.5rem"
               fontSize="xs"
-           
+         
               color="#FFFFFF"
             >
               Connect Your wallet
@@ -156,31 +159,27 @@ export default function Navbar() {
               </Button>
             </Link>
 
-            <Flex
-              bgColor="gray.400"
-              borderRadius="1rem"
-              p="0.3rem"
-              gap="0.5rem"
-              direction=""
-            >
+          
+          
+         
               <Link href="">
-                <Button fontSize="xs" variant="link" color="#FFFFFF">
+                <Button fontSize="xs" variant="link" color="gray.500">
                   Coin Toss
                 </Button>
               </Link>
 
               <Link href="">
-                <Button fontSize="xs" variant="link" color="#FFFFFF">
+                <Button fontSize="xs" variant="link" color="gray.500">
                   History
                 </Button>
               </Link>
 
               <Link href="">
-                <Button fontSize="xs" variant="link" color="#FFFFFF">
+                <Button fontSize="xs" variant="link" color="gray.500">
                   How it works?
                 </Button>
               </Link>
-            </Flex>
+           
 
             <Link href="">
               <Button fontSize="xs" variant="link" color="gray.500">
