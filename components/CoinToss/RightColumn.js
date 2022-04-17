@@ -7,7 +7,7 @@ const RightColumn = ({ allRounds }) => {
   }
 
   return (
-    <Flex w="25%" direction={"column"} gap="0.5rem">
+    <Flex w="25%" direction={"column"} gap="0.5rem" >
       <Flex pb="1.5rem">
         <Text fontSize="md" fontWeight={"bold"} color={"#FFFFFF"}>
           Latest results

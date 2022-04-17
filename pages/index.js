@@ -219,7 +219,7 @@ export default function Home({ COINFLIP_CONTRACT_ADDRESS, TOKEN_CONTRACT_ADDRESS
   // }
 
   return (
-    <Box width={"100vw"} height={"100vh"} backgroundImage={'url("/images/main-bg.jpg")'} backgroundRepeat={"no-repeat"} backgroundSize={"cover"} position={"relative"}>
+    <Box width={"100vw"} height={["93.025rem", "93.025rem", "100vh", "100vh", "100vh"]} backgroundImage={'url("/images/main-bg.jpg")'} backgroundRepeat={"no-repeat"} backgroundSize={"cover"} position={"relative"}>
       <Box width={"100vw"} height={"100vh"} className="lightning" position={"absolute"}></Box>
       <Flex width={"100%"} height={"100%"} alignItems={"center"} gap={"5"} direction={"column"} color={"white"}>
         <Navbar />

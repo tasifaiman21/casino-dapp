@@ -17,7 +17,7 @@ export default function HowItWorks({ allRounds }) {
       </Text>
       
       {/* mother flex for combined left leader board and right all bets start */}
-      <Flex w="100%">
+      <Flex w="100%" direction={["column", "column", "row", "row", "row"]}>
         {/* mother flex for left portion start */}
         <Flex w="40%" direction={"column"}>
           <Text pb="1rem" fontSize="sm" fontWeight="bold" color={"#FFFFFF"}>

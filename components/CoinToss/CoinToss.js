@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, Text, Button, Divider, Input, Box } from "@chakra-ui/react";
+import { Flex, Text, Button, Divider, Input, Box , useMediaQuery} from "@chakra-ui/react";
 import Image from "next/image";
 import LeftColumn from "./LeftColumn";
 import RightColumn from "./RightColumn";
@@ -19,6 +19,9 @@ export default function CoinToss({ coinFlipContractData, handleChange, coinFlip,
     coinFlip(selectedChoice);
   };
 
+  const [isLargerThan993] = useMediaQuery("(min-width: 993px)");
+  const [isLessThan993] = useMediaQuery("(max-width: 993px)");
+
   return (
     /* mother flex for all start */
     <Flex w="85%" direction={"column"}>
@@ -32,10 +35,15 @@ export default function CoinToss({ coinFlipContractData, handleChange, coinFlip,
           Try your luck and choose between 2 sides of the coin
         </Text>
       </Flex>
-      <Flex w="100%" gap="2">
+      <Flex w="100%" gap="2"    direction={["column", "column", "column", "row", "row"]} >
+        
+      {isLargerThan993 ? (
         <LeftColumn coinFlipContractData={coinFlipContractData} totalRound={totalRound} contractBalance={contractBalance} PROJECT_FEE={PROJECT_FEE} _coinFlip={_coinFlip} />
-        <Flex w="50%" alignItems="center" justifyContent="center" direction="column">
-          <Flex bgColor={"rgba(86, 146, 250, 0.6)"} w={"94%"} h="25.437rem" opacity={".9"} backdrop-filter="blur(20px)" borderRadius="1rem" direction={"Column"}>
+      ) : null}
+      
+     
+        <Flex   w={["100%", "100%", "100%", "50%", "50%"]} alignItems="center" justifyContent="center" direction="column">
+          <Flex bgColor={"rgba(86, 146, 250, 0.6)"}  w={["100%", "100%", "100%", "94%", "94%"]} h={["30.125rem", "30.125rem", "25.437rem", "25.437rem", "25.437rem"]} opacity={".9"} backdrop-filter="blur(20px)" borderRadius="1rem" direction={"Column"}>
             <Flex direction={"Column"} pt="1.5rem">
               <Text textAlign="center" fontSize="2xl" fontWeight="bold" color={"#FFFFFF"}>
                 
@@ -78,7 +86,7 @@ export default function CoinToss({ coinFlipContractData, handleChange, coinFlip,
                 </Text>
               </Flex>
             </Flex>
-            <Flex alignSelf={"center"}>
+            <Flex alignSelf={"center"} direction={["column", "column", "row", "row", "row"]}>
               <Flex h="3rem" border="none" w="13.125rem" bgColor="white" fontSize="xs" color={"black"} borderRadius="30px" marginLeft={"2.5rem"}>
                 <Flex pl="0.3rem" alignItems={"center"} justifyContent={"center"}>
                   <Image width="20px" height="20px" src="/inputFrame.png" alt="inputFrame" />
@@ -117,6 +125,9 @@ export default function CoinToss({ coinFlipContractData, handleChange, coinFlip,
             </Text>
           </Flex>
         </Flex>
+        {isLessThan993 ? (
+          <LeftColumn coinFlipContractData={coinFlipContractData} totalRound={totalRound} contractBalance={contractBalance} PROJECT_FEE={PROJECT_FEE} _coinFlip={_coinFlip} />
+        ) : null}
         <RightColumn allRounds={allRounds} />
       </Flex>
       <Flex pt="1rem" alignItems="center" gap="1" justifyContent="center">

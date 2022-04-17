@@ -20,9 +20,11 @@ const LeftColumn = ({coinFlipContractData, totalRound, contractBalance, PROJECT_
   console.log(contractBalance);
 
   return (
-    <Flex pt="1rem" w="25%" direction={ "column"}> {/* mother flex for total bet and symbol start */}
+    <Flex pt="1rem"  w={["100%", "100%", "100%", "50%", "50%"]}  direction={ "column"}> {/* mother flex for total bet and symbol start */}
       <Flex direction="column" w="100%">
-        <Flex gap="1rem" pb="2rem">
+        <Flex gap="1rem" pb="2rem" alignItems={["center", "center", "start", "start", "start"]} justifyContent={["center", "center", "center", "start", "start"]}>
+
+
           <Flex alignItems={ "center"} justifyContent={ "center"}>
             <Image width="23.75px" height="25px" src="/coinIcon.png" alt="coinIcon" /> </Flex>
           <Flex direction={ "column"}>
@@ -32,7 +34,7 @@ const LeftColumn = ({coinFlipContractData, totalRound, contractBalance, PROJECT_
         </Flex>
         <Divider w="100%" /> </Flex> {/* mother flex for total bet and symbol end */} {/* mother flex for volume and symbol start */}
       <Flex direction="column" pt="2rem" w="100%">
-        <Flex gap="1rem" pb="2rem">
+        <Flex gap="1rem" pb="2rem"  alignItems={["center", "center", "center", "start", "start"]} justifyContent={["center", "center", "center", "start", "start"]}>
           <Flex alignItems={ "center"} justifyContent={ "center"}>
             <Image width="27.5px" height="15px" src="/upArrow.png" alt="upArrow" /> </Flex>
           <Flex direction={ "column"}>
@@ -42,7 +44,7 @@ const LeftColumn = ({coinFlipContractData, totalRound, contractBalance, PROJECT_
         </Flex>
         <Divider w="100%" /> </Flex> {/* mother flex for volume and symbol end */} {/* mother flex for house edge and symbol start */}
       <Flex direction="column" pt="2rem" w="100%">
-        <Flex gap="1rem" pb="2rem">
+        <Flex gap="1rem" pb="2rem"  alignItems={["center", "center", "center", "start", "start"]} justifyContent={["center", "center", "center", "start", "start"]}>
           <Flex alignItems={ "center"} justifyContent={ "center"}>
             <Image width="25px" height="24.99px" src="/house.png" alt="house" /> </Flex>
           <Flex direction={ "column"}>
@@ -53,7 +55,7 @@ const LeftColumn = ({coinFlipContractData, totalRound, contractBalance, PROJECT_
           </Flex>
         </Flex>
       </Flex> {/* mother flex for house edge and symbol end */}
-      <Flex w="100%" pt="1rem">
+      <Flex w="100%" pt="1rem"  alignItems={["center", "center", "center", "start", "start"]} justifyContent={["center", "center", "center", "start", "start"]}>
         <Flex alignItems={ "center"} justifyContent="center" w="10.56rem" h="3rem" bgColor=" #BBD3FD" borderRadius={ "30px"} gap="2">
           <Icon as={FiShoppingCart} fontSize="xl" color="#102542" />
           <Text fontSize="sm" color={ "#102542"}> BuyMGToken </Text>
