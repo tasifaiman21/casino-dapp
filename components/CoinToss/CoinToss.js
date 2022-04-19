@@ -20,7 +20,7 @@ export default function CoinToss({ coinFlipContractData, handleChange, coinFlip,
   };
 
   const [isLargerThan993] = useMediaQuery("(min-width: 993px)");
-  const [isLessThan993] = useMediaQuery("(max-width: 993px)");
+  
 
   return (
     /* mother flex for all start */
@@ -37,7 +37,7 @@ export default function CoinToss({ coinFlipContractData, handleChange, coinFlip,
       </Flex>
       <Flex w="100%" gap="2"    direction={["column", "column", "column", "row", "row"]} >
         
-      {isLargerThan993 ? (
+      {isLargerThan993 && isLargerThan993  ? (
         <LeftColumn coinFlipContractData={coinFlipContractData} totalRound={totalRound} contractBalance={contractBalance} PROJECT_FEE={PROJECT_FEE} _coinFlip={_coinFlip} />
       ) : null}
       
@@ -125,7 +125,8 @@ export default function CoinToss({ coinFlipContractData, handleChange, coinFlip,
             </Text>
           </Flex>
         </Flex>
-        {isLessThan993 ? (
+
+        {isLargerThan993 && !isLargerThan993 ? (
           <LeftColumn coinFlipContractData={coinFlipContractData} totalRound={totalRound} contractBalance={contractBalance} PROJECT_FEE={PROJECT_FEE} _coinFlip={_coinFlip} />
         ) : null}
         <RightColumn allRounds={allRounds} />
